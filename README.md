@@ -8,3 +8,5 @@ The reason I need this is that the Globalprotect VPN client provided by PA cored
 To use it, when calling openconnect on the command line, add "--csd-wrapper=genhip.py"
 
 Note that a front-end will also be required if OKTA is used.  I use gp-saml-gui https://github.com/dlenski/gp-saml-gui which I modified to pass-through --csd-wrapper.
+
+Note that this requires that PAN Globalprotect 6.0 be installed in the default location /opt/paloaltonetworks/globalprotect.  It is not compatible with earlier versions which require some additional processing due to the HIP tool outputting two XML trees where the first must be removed. It also has not been tested with newer versions of Globalprotect.
